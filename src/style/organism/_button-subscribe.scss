@@ -1,0 +1,54 @@
+.button-subscribe {
+    position: relative;
+    text-align: center;
+
+    .button {
+        transition: background .4s, color .4s, font-size .05s, width .4s, border .4s;
+        outline: none;
+    }
+
+    .fa {
+        display: none;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 7px;
+        left: 50%;
+        z-index: 2;
+        font-size: 28px;
+
+        @media (max-width: $screen-sm) {
+            left: 265px/2 - 14px;
+        }
+    }
+
+    &__svg {
+        // @include rotate(270deg);
+        display: none;
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: rotate(270deg);
+        margin-left: -33px;
+
+        &__circle {
+            stroke-dasharray: 0 200;
+        }
+
+        .fill-circle {
+            animation: fill-stroke 2s .4s linear forwards;
+        }
+    }
+
+    .circle {
+        margin: auto;
+        border: 3px solid #c3c3c3;
+        border-radius: 50%;
+        background: 0;
+        width: 60px;
+        height: 60px;
+
+        &:hover {
+            background: none;
+        }
+    }
+}

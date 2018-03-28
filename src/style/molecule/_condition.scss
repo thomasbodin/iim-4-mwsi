@@ -1,0 +1,6 @@
+.condition {
+    @include font-size(12);
+
+    font-style: italic;
+    color: lighten($secondary-color, 30%);
+}

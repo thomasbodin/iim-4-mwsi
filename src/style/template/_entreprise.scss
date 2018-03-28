@@ -1,0 +1,8 @@
+.page-template-entreprise {
+    .intro {
+        @include font-size(16);
+
+        margin-bottom: 80px;
+        color: $secondary-color;
+    }
+}

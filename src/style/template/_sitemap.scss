@@ -1,0 +1,24 @@
+.sitemap {
+    a {
+        transition: all .5s;
+        color: $white;
+
+        &:hover,
+        &:active {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+
+    li {
+        margin-bottom: 4px;
+
+        @media (max-width: $screen-sm) {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+}

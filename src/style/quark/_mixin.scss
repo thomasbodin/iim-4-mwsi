@@ -1,0 +1,8 @@
+html {
+    font-size: 62.5%; /* Sets up the Base 10 stuff */
+}
+
+@mixin font-size($size-value: 1.6) {
+    font-size: $size-value + px;
+    font-size: ($size-value / 10) + rem;
+}

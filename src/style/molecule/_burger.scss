@@ -1,0 +1,45 @@
+.burger {
+    display: inline-block;
+    transition: all .7s ease;
+    margin: 0 auto;
+    cursor: pointer;
+    width: auto;
+
+    &__bar {
+        display: block;
+        transition: all .7s ease;
+        margin: 6px auto;
+        background-color: $secondary-color;
+        width: 30px;
+        height: 3px;
+
+        &--middle {
+            margin: 0 auto;
+        }
+
+        .nav-right.visible-xs .active & {
+            transition: all .7s ease;
+            background-color: $white;
+        }
+    }
+
+    &.active &__bar {
+        &--top {
+            transform: translateY(9px) rotateZ(45deg);
+        }
+
+        &--middle {
+            width: 0;
+        }
+
+        &--bottom {
+            transform: translateY(-9px) rotateZ(-45deg);
+        }
+    }
+
+    &--mobile {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+    }
+}

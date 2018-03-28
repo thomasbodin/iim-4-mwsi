@@ -1,0 +1,65 @@
+.input-line {
+    display: block;
+    position: relative;
+    margin: 0 0 30px;
+    width: 100%;
+    line-height: 1em;
+
+    &__label {
+        @include font-size(12);
+
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        transition: all .225s cubic-bezier(.455, .03, .515, .955);
+        pointer-events: none;
+        transform-origin: 0% 0%;
+    }
+
+    &__input {
+        @include font-size(12);
+
+        display: block;
+        border: 0;
+        background: 0;
+        padding: 8px 10px;
+        width: 100%;
+        color: #fff;
+
+        &:focus,
+        &.has-value {
+            outline: none;
+
+            + .input-line__label {
+                @include font-size(10);
+
+                bottom: 30px;
+            }
+        }
+
+        @media (max-width: $screen-sm) {
+            @include font-size(16);
+        }
+    }
+
+    &:after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $white;
+        width: 100%;
+        height: 1px;
+        content: '';
+        pointer-events: none;
+    }
+
+    .fa {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}

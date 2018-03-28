@@ -1,0 +1,21 @@
+.top-panel {
+    margin-top: 102px;
+    background: url('../../assets/img/night-mountain.jpg') no-repeat top center / cover;
+    padding: 40px 0;
+
+    &__title {
+        margin: 0;
+        text-transform: uppercase;
+        color: $secondary-color;
+        font-family: $secondary-font;
+
+        @media (max-width: $screen-sm) {
+            float: none !important;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        margin-top: 0;
+    }
+}

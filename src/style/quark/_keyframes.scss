@@ -1,0 +1,41 @@
+// Main nav
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -400px;
+    }
+}
+
+// Button subscribe
+@keyframes fill-stroke {
+    0% {
+        stroke-dasharray: 0 200;
+    }
+
+    20% {
+        stroke-dasharray: 20 200;
+    }
+
+    40% {
+        stroke-dasharray: 30 200;
+    }
+
+    50% {
+        stroke-dasharray: 90 200;
+    }
+
+    70% {
+        stroke-dasharray: 120 200;
+    }
+
+    90% {
+        stroke-dasharray: 140 200;
+    }
+
+    100% {
+        stroke-dasharray: 182 200;
+    }
+}

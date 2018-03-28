@@ -1,0 +1,10 @@
+.faq {
+    &__question {
+        @include font-size(22);
+
+        border-radius: 5px;
+        padding-top: 40px;
+        color: #93f2dc;
+        font-weight: 700;
+    }
+}

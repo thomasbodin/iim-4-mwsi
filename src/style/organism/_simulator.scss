@@ -1,0 +1,113 @@
+.simulator {
+    background: url('../../assets/img/simulator.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 50px 0;
+
+    @media (max-width: $screen-sm) {
+        background-attachment: inherit;
+    }
+
+    &__job {
+        display: inline-block;
+        position: relative;
+        margin: 10px 5px;
+        min-width: 150px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+
+        label,
+        input {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        [type="radio"] {
+            opacity: .011;
+            z-index: 10;
+        }
+
+        [type="radio"]:checked + label {
+            border-radius: $border-radius;
+            background: $secondary-color;
+            color: $primary-color;
+        }
+
+        label {
+            z-index: 9;
+            border-radius: $border-radius;
+            background: $primary-color;
+            cursor: pointer;
+            color: $white;
+        }
+
+        @media (max-width: $screen-sm) {
+            width: 100%;
+        }
+    }
+
+    &__salary {
+        @include font-size(120);
+
+        margin: 40px 0;
+        font-family: $secondary-font;
+
+        @media (max-width: $screen-sm) {
+            @include font-size(90);
+        }
+    }
+
+    &__select {
+        position: relative;
+
+        select {
+            @include font-size(16);
+
+            display: block;
+            position: relative;
+            margin: 10px 0;
+            border: 0;
+            border-radius: $border-radius;
+            background: $primary-color;
+            cursor: pointer;
+            padding-left: 20px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: $white;
+            -webkit-appearance: none; // iOS Safari
+        }
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            color: $white;
+            font-family: 'FontAwesome';
+            content: '\f107';
+        }
+    }
+
+    &__animated-scroll {
+        visibility: hidden;
+
+        &.animated {
+            visibility: visible;
+        }
+    }
+
+    &__condition {
+        opacity: .8;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .intro {
+        color: $white !important;
+    }
+}

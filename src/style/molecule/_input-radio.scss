@@ -1,0 +1,23 @@
+.input-radio {
+    display: block;
+    margin: 0 0 30px;
+    width: 100%;
+    line-height: 1em;
+
+    &__label {
+        @include font-size(12);
+
+        display: block;
+        padding-left: 10px;
+    }
+
+    &__input {
+        margin: 10px 5px 0 10px;
+    }
+
+    &__bloc {
+        @media (min-width: $screen-sm) {
+            display: inline-block;
+        }
+    }
+}

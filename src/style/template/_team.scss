@@ -1,0 +1,130 @@
+$totalColumns: 6;
+
+// Custom Prefix
+.team {
+
+    &-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: $primary-color;
+
+        @for $i from 1 through $totalColumns {
+            &[data-column="#{$i}"] {
+                .team-column {
+                    width: percentage( 1 / $i );
+                    max-width: percentage( 1 / $i );
+                    min-width: percentage( 1 / $i );
+                    flex-basis: percentage( 1 / $i );
+                }
+            }
+        }
+    }
+
+    &-column {
+        position: relative;
+        box-shadow: 0 0 0 1px #fff;
+        padding: 10px;
+        background: $primary-color;
+        box-sizing: border-box;
+        transition: box-shadow .2s ease, transform .2s ease;
+
+        &:before {
+            display: block;
+            padding-top: 100%;
+            content: "";
+        }
+
+        &:hover {
+            z-index: 1;
+            box-shadow: 0 8px 50px rgba(#fff, .2);
+            transform: scale(1.05);
+
+            .team-social {
+                margin: 16px 0 0;
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 800px) {
+            width: 50% !important;
+            max-width: 50% !important;
+            min-width: 50% !important;
+            flex-basis: 50% !important;
+        }
+
+        @media (max-width: 600px) {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 100% !important;
+            flex-basis: 100% !important;
+        }
+    }
+
+    &-user {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translate(0, -50%);
+        text-align: center;
+
+        &__avatar {
+            margin: 0 auto 20px;
+            border-radius: 100%;
+            width: 98px;
+            height: 98px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        &__name {
+            @include font-size(15);
+
+            line-height: 2.625rem;
+            color: $white;
+            font-family: $secondary-font;
+        }
+
+        &__title {
+            @include font-size(10);
+
+            line-height: 2.375rem;
+            color: $secondary-color;
+        }
+    }
+
+    &-social {
+        margin: 0 0 -18px;
+        padding-left: 0;
+        opacity: 0;
+        transition: margin 0.2s ease, opacity 0.2s ease;
+
+        &__item {
+            display: inline-block;
+            margin: 0 10px;
+
+            a {
+                display: block;
+                text-decoration: none;
+            }
+
+            .fa {
+                @include font-size(24);
+
+                display: block;
+                color: $white;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}

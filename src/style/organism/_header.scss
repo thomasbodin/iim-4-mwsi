@@ -1,0 +1,40 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background: $primary-color;
+    padding: 20px 0;
+    width: 100%;
+
+    .container {
+        position: relative;
+    }
+
+    .move-to-left & {
+        left: -400px;
+    }
+
+    &--hero {
+        background: transparent;
+    }
+
+    .nav-right {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+
+        .visible-xs {
+            z-index: 3;
+        }
+
+        @media (max-width: $screen-sm) {
+            top: 0;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        position: relative;
+        min-height: 76px;
+    }
+}

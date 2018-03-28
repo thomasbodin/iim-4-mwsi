@@ -1,0 +1,26 @@
+.chiffre {
+    background: url('../../assets/img/night-mountain.jpg') no-repeat center bottom fixed;
+    background-size: cover;
+    padding: 80px 0;
+
+    &__content {
+        @include font-size(22);
+
+        border-radius: $border-radius;
+        padding: 40px;
+        color: $secondary-color-shade1;
+        font-weight: bold;
+
+        &__title {
+            margin: 20px 0;
+        }
+
+        p {
+            @include font-size(22);
+        }
+
+        @media (max-width: $screen-sm) {
+            padding: 0;
+        }
+    }
+}

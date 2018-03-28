@@ -1,0 +1,22 @@
+.table-striped {
+
+    & > tbody > tr:nth-of-type(odd) {
+        background: lighten($primary-color, 5%);
+    }
+
+    & > tbody > tr > td {
+        vertical-align: middle;
+
+        a {
+            color: $white;
+        }
+    }
+
+    &__delete td {
+        text-decoration: line-through;
+    }
+
+    .icon-flag {
+        color: $secondary-color;
+    }
+}

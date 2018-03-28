@@ -1,0 +1,30 @@
+.logo {
+    line-height: 1.2;
+    color: $white;
+
+    &__name {
+        @include font-size(52);
+
+        font-family: $secondary-font;
+
+        &__dot {
+            color: $secondary-color;
+        }
+
+        @media (max-width: $screen-sm) {
+            @include font-size(28);
+        }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: inherit;
+        color: inherit;
+    }
+
+    @media (max-width: $screen-sm) {
+        float: left;
+        text-align: center;
+    }
+}

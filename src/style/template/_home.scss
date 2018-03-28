@@ -1,0 +1,20 @@
+.home,
+.page-template-simulator {
+    .intro {
+        @include font-size(16);
+
+        margin-bottom: 80px;
+        color: $secondary-color;
+    }
+
+    .hero__form {
+        .button--full {
+            margin-bottom: 30px;
+        }
+
+        .button--linkedin {
+            margin-bottom: 0;
+        }
+    }
+
+}

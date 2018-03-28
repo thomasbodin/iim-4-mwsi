@@ -1,0 +1,16 @@
+.about {
+
+    &__col {
+        margin-top: 30px;
+
+        &__title {
+            margin-bottom: 20px;
+            line-height: 26px;
+            color: $secondary-color-shade1;
+        }
+    }
+
+    p:not(.chiffre__content) {
+        @include font-size(16);
+    }
+}

@@ -1,0 +1,109 @@
+.main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    background-color: $primary-color;
+    width: 400px;
+    height: 100vh;
+
+    &__list {
+        position: relative;
+        margin: 100px 0 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+
+        &__item {
+            transform: translateY(-20px);
+            opacity: 0;
+            margin: 30px 0;
+
+            &--login {
+                margin-bottom: 100px;
+            }
+
+            &:first-child {
+                transition: all .7s .2s ease-in-out;
+            }
+
+            &:nth-child(2) {
+                transition: all .7s .4s ease-in-out;
+            }
+
+            &:nth-child(3) {
+                transition: all .7s .6s ease-in-out;
+            }
+
+            &:nth-child(4) {
+                transition: all .7s .8s ease-in-out;
+            }
+
+            &:nth-child(5) {
+                transition: all .7s 1s ease-in-out;
+            }
+
+            &:nth-child(6) {
+                transition: all .7s 1.2s ease-in-out;
+            }
+
+            &:last-child {
+                transition: all .7s 1.4s ease-in-out;
+            }
+
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            &__link {
+                @include font-size(14);
+
+                position: relative;
+                padding-bottom: 7px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $white;
+
+                &:before {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: all .5s ease-in-out;
+                    background-color: $secondary-color;
+                    width: 0;
+                    height: 2px;
+                    content: '';
+
+                    @media (max-width: $screen-sm) {
+                        display: none;
+                    }
+                }
+
+                &.active:before,
+                &:hover:before {
+                    width: 100%;
+                }
+
+                &:focus,
+                &:active,
+                &:hover {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        width: 100%;
+    }
+}
+
+/*
+@media (min-width: 480px) {
+    .nav-list {
+        display: block;
+    }
+}
+*/

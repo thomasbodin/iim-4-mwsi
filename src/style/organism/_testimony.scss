@@ -1,0 +1,34 @@
+.testimony {
+    background: url('../../assets/img/testimony.jpg') no-repeat center bottom fixed;
+    background-size: cover;
+
+    &__slider {
+        text-align: center;
+
+        &__item {
+            @include font-size(18);
+
+            margin: auto;
+            width: 70%;
+            line-height: 2;
+            font-style: italic;
+
+            &__author {
+                @include font-size(14);
+
+                margin-top: 20px;
+                color: $secondary-color-shade1;
+                font-weight: bold;
+                font-style: normal;
+            }
+        }
+    }
+
+    p.intro {
+        color: $white;
+    }
+
+    @media (max-width: $screen-sm) {
+        background-attachment: inherit;
+    }
+}

@@ -1,0 +1,10 @@
+a {
+    transition: all .5s;
+    color: $secondary-color-shade1;
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+}

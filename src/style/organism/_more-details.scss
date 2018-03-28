@@ -1,0 +1,18 @@
+.more-details {
+    margin: auto;
+    width: 80%;
+
+    &__info {
+        @include font-size(10);
+
+        color: #a0a0a0;
+    }
+
+    .input-line {
+        margin: 0 0 45px;
+
+        &--last {
+            margin-bottom: 20px;
+        }
+    }
+}

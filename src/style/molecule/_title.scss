@@ -1,0 +1,22 @@
+.title {
+    @include font-size(50);
+
+    margin: 80px 0 20px;
+    text-align: center;
+    font-family: $secondary-font;
+
+    &:after {
+        display: block;
+        margin: 20px auto;
+        background-color: $secondary-color;
+        width: 1.05em;
+        height: 2px;
+        content: '';
+    }
+
+    @media (max-width: $screen-sm) {
+        @include font-size(28);
+
+        margin: 40px 0 10px;
+    }
+}

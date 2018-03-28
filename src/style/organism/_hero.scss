@@ -1,0 +1,185 @@
+.hero {
+    position: relative;
+    background: url('../../assets/img/hidden-market-hero.jpg') no-repeat center center / cover;
+    padding-top: 14%;
+    min-height: 100vh;
+    color: $white;
+
+    &--recruteur {
+        background-image: url('../../assets/img/bridge.jpg');
+    }
+
+    &--subscribe {
+        padding-top: 125px;
+
+        @media (max-width: $screen-sm) {
+            padding-top: 0;
+        }
+
+        @media (max-height: 800px) {
+            padding-bottom: 120px;
+        }
+
+        .hero {
+            &__title {
+                @include font-size(40);
+
+                @media (max-width: $screen-sm) {
+                    @include font-size(30);
+                }
+            }
+
+            &__subtitle {
+                @include font-size(20);
+
+                margin-bottom: 30px;
+
+                @media (max-width: $screen-sm) {
+                    @include font-size(18);
+                }
+            }
+        }
+    }
+
+    &__title {
+        @include font-size(70);
+
+        margin-top: 30px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        line-height: 1.2;
+        font-family: $secondary-font;
+
+        @media (max-width: $screen-sm) {
+            @include font-size(34);
+        }
+    }
+
+    &__subtitle {
+        @include font-size(24);
+
+        margin-top: 5px;
+        color: $secondary-color-shade1;
+        font-weight: bold;
+
+        @media (max-width: $screen-sm) {
+            @include font-size(18);
+        }
+    }
+
+    &__partners {
+        @include font-size(16);
+
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        opacity: .8;
+        width: 100%;
+        text-align: center;
+
+        .bx-wrapper {
+            margin-top: 10px;
+        }
+    }
+
+    &__form {
+        border-radius: $border-radius;
+        background: rgba(1, 17, 38, .4);
+        padding: 40px;
+
+        &__intro {
+            @include font-size(12);
+
+            margin: 0 0 30px;
+            color: $secondary-color;
+        }
+
+        &__or {
+            @include font-size(12);
+
+            margin: 0 0 30px;
+            color: $secondary-color;
+            position: relative;
+
+            &:before {
+                height: 1px;
+                background: $secondary-color;
+                width: 45%;
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+            }
+
+            &:after {
+                height: 1px;
+                background: $secondary-color;
+                width: 45%;
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+            }
+        }
+
+        &__link {
+            @include font-size(14);
+
+            display: inline-block;
+            position: relative;
+            margin-top: 8px;
+            margin-right: 24px;
+            vertical-align: text-bottom;
+            text-transform: uppercase;
+            line-height: 33px;
+            color: $white;
+
+            @media (max-width: $screen-sm) {
+                display: none;
+            }
+
+            &.active,
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                color: $white;
+            }
+
+            &:before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: all .5s ease-in-out;
+                background-color: $secondary-color;
+                width: 0;
+                height: 2px;
+                content: '';
+            }
+
+            &.active:before,
+            &:hover:before {
+                width: 100%;
+            }
+        }
+
+        &__external-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: $secondary-color-shade1;
+            font-style: italic;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        @media (max-width: $screen-sm) {
+           padding: 20px;
+        }
+    }
+
+    @media (max-width: $screen-sm) {
+        padding: 10px 0;
+        min-height: inherit;
+    }
+}

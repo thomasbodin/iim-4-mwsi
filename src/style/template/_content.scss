@@ -1,0 +1,11 @@
+.content {
+    position: relative;
+    //transition: all .7s ease-in-out;
+    z-index: 21;
+    background: $primary-color;
+
+    &.move-to-left {
+        z-index: 20;
+        //animation: slide .7s forwards;
+    }
+}

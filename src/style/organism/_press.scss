@@ -1,0 +1,18 @@
+.press {
+
+    &__text {
+        @include font-size(30);
+
+        @media (max-width: $screen-sm) {
+            text-align: center;
+        }
+    }
+
+    &__button {
+        margin-top: 20px;
+    }
+
+    .fa {
+        @include font-size(100);
+    }
+}
